@@ -100,20 +100,28 @@
     \( \sum \) malla \( \Delta V = 0 \)
 </p>
 
-<p class="subtitulo tooltip">Circuito RC
-    <span class="tooltiptext">En un circuito RC, un capacitor se carga o descarga a través de una resistencia.</span>
+<p class="subtitulo tooltip">Circuito RC (Carga)
+    <span class="tooltiptext">En un circuito RC, un capacitor se carga a través de una resistencia.</span>
 </p>
 <p class="formula">
     <span class="equation-number">3.</span>
-    \( q(t) = \)
-    <span class="tooltip">C
-            <span class="tooltiptext">Capacitancia (en faradios)</span>
-        </span>
-    \( V(1 - e^{-\frac{t}{RC}}) \)
+    \( q(t) = C V(1 - e^{-\frac{t}{RC}}) \)
 </p>
 <p class="formula">
     <span class="equation-number">4.</span>
     \( V_C = V(1 - e^{-\frac{t}{RC}}) \)
+</p>
+
+<p class="subtitulo tooltip">Circuito RC (Descarga)
+    <span class="tooltiptext">En un circuito RC, un capacitor se descarga a través de una resistencia.</span>
+</p>
+<p class="formula">
+    <span class="equation-number">5.</span>
+    \( i = \frac{V_0}{R} e^{-\frac{t}{RC}} \)
+</p>
+<p class="formula">
+    <span class="equation-number">6.</span>
+    \( q(t) = Q_0 e^{-\frac{t}{RC}} \)
 </p>
 <hr>
 
@@ -123,20 +131,20 @@
     <span class="tooltiptext">Es la fuerza que experimenta una carga en movimiento en un campo electromagnético.</span>
 </p>
 <p class="formula">
-    <span class="equation-number">5.</span>
-    \( \vec{F} = \)
-    <span class="tooltip">q
-            <span class="tooltiptext">Carga de la partícula (en coulombs)</span>
-        </span>
-    \( \vec{v} \times \vec{B} \)
+    <span class="equation-number">7.</span>
+    \( \vec{F} = q \vec{v} \times \vec{B} \)
 </p>
 <p class="formula">
-    <span class="equation-number">6.</span>
+    <span class="equation-number">8.</span>
     \( F = qvB \sin \theta \)
 </p>
 <p class="formula">
-    <span class="equation-number">7.</span>
+    <span class="equation-number">9.</span>
     \( U = -\mu \cdot B \cos \theta \)
+</p>
+<p class="formula">
+    <span class="equation-number">10.</span>
+    \( \tau = \mu B \sin \theta \)
 </p>
 <hr>
 
@@ -146,7 +154,7 @@
     <span class="tooltiptext">Describe el campo magnético generado por una corriente en un punto específico del espacio.</span>
 </p>
 <p class="formula">
-    <span class="equation-number">8.</span>
+    <span class="equation-number">11.</span>
     \( \vec{B} = \frac{\mu_0}{4\pi} \int \frac{I d\vec{l} \times \hat{r}}{r^2} \)
 </p>
 
@@ -154,19 +162,31 @@
     <span class="tooltiptext">Establece que el campo magnético en una trayectoria cerrada es proporcional a la corriente que atraviesa la superficie encerrada.</span>
 </p>
 <p class="formula">
-    <span class="equation-number">9.</span>
+    <span class="equation-number">12.</span>
     \( \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enc}} \)
+</p>
+
+<p class="subtitulo tooltip">Ley de Gauss para el Magnetismo
+    <span class="tooltiptext">Indica que el flujo magnético neto a través de una superficie cerrada es cero, lo cual implica que no existen monopolos magnéticos.</span>
+</p>
+<p class="formula">
+    <span class="equation-number">13.</span>
+    \( \oint \vec{B} \cdot d\vec{A} = 0 \)
 </p>
 <hr>
 
 <h3>Inductancia</h3>
 
 <p class="formula">
-    <span class="equation-number">10.</span>
+    <span class="equation-number">14.</span>
     \( \varepsilon = -L \frac{di}{dt} \)
 </p>
 <p class="formula">
-    <span class="equation-number">11.</span>
+    <span class="equation-number">15.</span>
+    \( L = \frac{N \Phi_B}{i} \)
+</p>
+<p class="formula">
+    <span class="equation-number">16.</span>
     \( U = \frac{1}{2} L i^2 \)
 </p>
 
