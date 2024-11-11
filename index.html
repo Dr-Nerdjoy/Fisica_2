@@ -73,6 +73,15 @@
             border-top: 1px solid #ccc;
             margin: 20px 0;
         }
+        .constants {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .constants div {
+            text-align: left;
+        }
     </style>
     <!-- Cargar MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -81,50 +90,117 @@
 <body>
 
 <h2>Fórmulas de Física</h2>
+<h3>Constantes</h3>
+<div class="constants">
+    <div>
+        \( k = \frac{1}{4 \pi \varepsilon_0} = 9 \times 10^9 \, \text{N} \, \text{m}^2/\text{C}^2 \) <br>
+        \( \varepsilon_0 = 8.8542 \times 10^{-12} \, \text{C}^2/\text{N} \, \text{m}^2 \) <br>
+        \( m_e = 9.1094 \times 10^{-31} \, \text{Kg} \) <br>
+        \( m_n = 1.67491 \times 10^{-27} \, \text{Kg} \) <br>
+        \( \mu_0 = 4\pi \times 10^{-7} \, \text{T} \, \text{m}/\text{A} \)
+    </div>
+    <div>
+        \( N_A = 6.022141 \times 10^{23} \, \text{átomos}/\text{mol} \) <br>
+        \( e = 1.6022 \times 10^{-19} \, \text{C} \) <br>
+        \( m_p = 1.6726 \times 10^{-27} \, \text{Kg} \) <br>
+        \( eV = 1.6022 \times 10^{-19} \, \text{J} \)
+    </div>
+</div>
+
+<h3>Circuitos de Corriente Continua</h3>
+
+<p class="subtitulo tooltip">Ley de Kirchhoff
+    <span class="tooltiptext">Establece que la suma de corrientes que entran a un nodo es igual a la suma de las corrientes que salen.</span>
+</p>
+<p class="formula">
+    <span class="equation-number">1.</span>
+    \( \sum \text{nodo} \)
+    <span class="tooltip">\( I_{\text{entran}} \)
+        <span class="tooltiptext">Corriente que entra en el nodo</span>
+    </span> = 0
+</p>
+<p class="formula">
+    <span class="equation-number">2.</span>
+    \( \sum \text{malla} \, \Delta V = 0 \)
+</p>
+
+<p class="subtitulo tooltip">Circuito RC (Carga)
+    <span class="tooltiptext">En un circuito RC, un capacitor se carga a través de una resistencia.</span>
+</p>
+<p class="formula">
+    <span class="equation-number">3.</span>
+    \( q(t) = \)
+    <span class="tooltip">\( C \)
+        <span class="tooltiptext">Capacitancia del capacitor</span>
+    </span>
+    \( V(1 - e^{-\frac{t}{RC}}) \)
+</p>
+<p class="formula">
+    <span class="equation-number">4.</span>
+    \( V_C = V(1 - e^{-\frac{t}{RC}}) \)
+</p>
+<p class="formula">
+    <span class="equation-number">5.</span>
+    \( i = \frac{V}{R} e^{-\frac{t}{RC}} \)
+</p>
+
+<p class="subtitulo tooltip">Circuito RC (Descarga)
+    <span class="tooltiptext">En un circuito RC, un capacitor se descarga a través de una resistencia.</span>
+</p>
+<p class="formula">
+    <span class="equation-number">6.</span>
+    \( q(t) = Q_0 e^{-\frac{t}{RC}} \)
+</p>
+<p class="formula">
+    <span class="equation-number">7.</span>
+    \( i = \frac{V_0}{R} e^{-\frac{t}{RC}} \)
+</p>
+<hr>
 
 <h3>Magnetismo</h3>
 
 <p class="formula">
-    <span class="equation-number">1.</span>
+    <span class="equation-number">8.</span>
     <span class="tooltip">\( \vec{F} \)
-            <span class="tooltiptext">Fuerza magnética sobre una partícula con carga en movimiento</span>
-        </span> =
+        <span class="tooltiptext">Fuerza magnética sobre una partícula con carga en movimiento</span>
+    </span> =
     <span class="tooltip">\( q \)
-            <span class="tooltiptext">Carga de la partícula </span>
-        </span>
+        <span class="tooltiptext">Carga de la partícula</span>
+    </span>
     <span class="tooltip">\( \vec{v} \)
-            <span class="tooltiptext">Velocidad de la partícula</span>
-        </span> ×
+        <span class="tooltiptext">Velocidad de la partícula</span>
+    </span> ×
     <span class="tooltip">\( \vec{B} \)
-            <span class="tooltiptext">Campo magnético</span>
-        </span>
+        <span class="tooltiptext">Campo magnético</span>
+    </span>
 </p>
 
 <p class="subtitulo tooltip">Ley de Gauss para el Magnetismo
     <span class="tooltiptext">El flujo magnético total a través de cualquier superficie cerrada es igual a cero</span>
 </p>
 <p class="formula">
-    <span class="equation-number">2.</span>
+    <span class="equation-number">9.</span>
     \( \oint \)
     <span class="tooltip">\( \vec{B} \)
-            <span class="tooltiptext">Campo magnético</span>
-        </span> ·
+        <span class="tooltiptext">Campo magnético</span>
+    </span> ·
     <span class="tooltip">\( d\vec{A} \)
-            <span class="tooltiptext">Elemento vectorial de área de la superficie</span>
-        </span> = 0
+        <span class="tooltiptext">Elemento vectorial de área de la superficie</span>
+    </span> = 0
 </p>
+<hr>
 
 <h3>Fuentes de Campo Magnético</h3>
 
 <p class="formula">
-    <span class="equation-number">3.</span>
+    <span class="equation-number">10.</span>
     \( \Phi_B = \int \)
     <span class="tooltip">\( B \cos \phi \)
-            <span class="tooltiptext">Componente del campo magnético perpendicular a la superficie</span>
-        </span>
+        <span class="tooltiptext">Componente del campo magnético perpendicular a la superficie</span>
+    </span>
     <span class="tooltip">\( dA \)
-            <span class="tooltiptext">Elemento de área de la superficie</span>
-        </span> =
+        <span class="tooltiptext">Elemento de área de la superficie</span>
+    </span> =
     \( \int B_{\perp} \, dA \) = \( \int \vec{B} \cdot d\vec{A} \)
 </p>
 
