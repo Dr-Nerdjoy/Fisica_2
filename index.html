@@ -114,10 +114,7 @@
 </p>
 <p class="formula">
     <span class="equation-number">1.</span>
-    \( \sum \text{nodo} \)
-    <span class="tooltip">\( I_{\text{entran}} \)
-        <span class="tooltiptext">Corriente que entra en el nodo</span>
-    </span> = 0
+    \( \sum \text{nodo} I_{\text{entran}} = 0 \)
 </p>
 <p class="formula">
     <span class="equation-number">2.</span>
@@ -129,11 +126,7 @@
 </p>
 <p class="formula">
     <span class="equation-number">3.</span>
-    \( q(t) = \)
-    <span class="tooltip">\( C \)
-        <span class="tooltiptext">Capacitancia del capacitor</span>
-    </span>
-    \( V(1 - e^{-\frac{t}{RC}}) \)
+    \( q(t) = C V(1 - e^{-\frac{t}{RC}}) \)
 </p>
 <p class="formula">
     <span class="equation-number">4.</span>
@@ -161,18 +154,7 @@
 
 <p class="formula">
     <span class="equation-number">8.</span>
-    <span class="tooltip">\( \vec{F} \)
-        <span class="tooltiptext">Fuerza magnética sobre una partícula con carga en movimiento</span>
-    </span> =
-    <span class="tooltip">\( q \)
-        <span class="tooltiptext">Carga de la partícula</span>
-    </span>
-    <span class="tooltip">\( \vec{v} \)
-        <span class="tooltiptext">Velocidad de la partícula</span>
-    </span> ×
-    <span class="tooltip">\( \vec{B} \)
-        <span class="tooltiptext">Campo magnético</span>
-    </span>
+    \( \vec{F} = q \vec{v} \times \vec{B} \)
 </p>
 
 <p class="subtitulo tooltip">Fuerza de Lorentz
@@ -186,6 +168,26 @@
     <span class="equation-number">10.</span>
     \( F = I l \vec{B} \)
 </p>
+<p class="formula">
+    <span class="equation-number">11.</span>
+    \( \sum F = \frac{m v^2}{R} \)
+</p>
+<p class="formula">
+    <span class="equation-number">12.</span>
+    \( \tau = \mu B \sin \theta \)
+</p>
+<p class="formula">
+    <span class="equation-number">13.</span>
+    \( U = - \mu \cdot B \cos \theta \)
+</p>
+<p class="formula">
+    <span class="equation-number">14.</span>
+    \( \vec{\tau} = \vec{\mu} \times \vec{B} \)
+</p>
+<p class="formula">
+    <span class="equation-number">15.</span>
+    \( \vec{\mu} = N i A \hat{n} \)
+</p>
 <hr>
 
 <h3>Fuentes de Campo Magnético</h3>
@@ -194,50 +196,57 @@
     <span class="tooltiptext">Describe el campo magnético generado por una corriente en un punto específico del espacio.</span>
 </p>
 <p class="formula">
-    <span class="equation-number">11.</span>
+    <span class="equation-number">16.</span>
     \( \vec{B} = \frac{\mu_0}{4\pi} \int \frac{I d\vec{l} \times \hat{r}}{r^2} \)
 </p>
 
+<p class="subtitulo tooltip">Ley de Ampère
+    <span class="tooltiptext">Establece que el campo magnético en una trayectoria cerrada es proporcional a la corriente que atraviesa la superficie encerrada.</span>
+</p>
+<p class="formula">
+    <span class="equation-number">17.</span>
+    \( \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enc}} \)
+</p>
+<p class="formula">
+    <span class="equation-number">18.</span>
+    \( B = \mu_0 n I \) (Solenoide)
+</p>
+<p class="formula">
+    <span class="equation-number">19.</span>
+    \( B = \frac{\mu_0 I}{2\pi r} \) (Conductor largo)
+</p>
+<p class="formula">
+    \( \mu_0 = 4 \pi \times 10^{-7} \, \text{Tm/A} \)
+</p>
+<p class="formula">
+    <span class="equation-number">20.</span>
+    \( n = \frac{\#\text{vueltas}}{\text{Longitud}} \)
+</p>
 <p class="subtitulo tooltip">Ley de Gauss para el Magnetismo
-    <span class="tooltiptext">El flujo magnético total a través de cualquier superficie cerrada es igual a cero</span>
+    <span class="tooltiptext">Indica que el flujo magnético neto a través de una superficie cerrada es cero, lo cual implica que no existen monopolos magnéticos.</span>
 </p>
 <p class="formula">
-    <span class="equation-number">12.</span>
-    \( \oint \)
-    <span class="tooltip">\( \vec{B} \)
-        <span class="tooltiptext">Campo magnético</span>
-    </span> ·
-    <span class="tooltip">\( d\vec{A} \)
-        <span class="tooltiptext">Elemento vectorial de área de la superficie</span>
-    </span> = 0
+    <span class="equation-number">21.</span>
+    \( \oint \vec{B} \cdot d\vec{A} = 0 \)
 </p>
-
 <p class="formula">
-    <span class="equation-number">13.</span>
-    \( \Phi_B = \int \)
-    <span class="tooltip">\( B \cos \phi \)
-        <span class="tooltiptext">Componente del campo magnético perpendicular a la superficie</span>
-    </span>
-    <span class="tooltip">\( dA \)
-        <span class="tooltiptext">Elemento de área de la superficie</span>
-    </span> =
-    \( \int B_{\perp} \, dA \) = \( \int \vec{B} \cdot d\vec{A} \)
+    <span class="equation-number">22.</span>
+    \( \varepsilon = \oint \vec{E} \cdot d\vec{l} \)
 </p>
-
 <hr>
 
 <h3>Inductancia</h3>
 
 <p class="formula">
-    <span class="equation-number">14.</span>
+    <span class="equation-number">23.</span>
     \( \varepsilon = -L \frac{di}{dt} \)
 </p>
 <p class="formula">
-    <span class="equation-number">15.</span>
+    <span class="equation-number">24.</span>
     \( L = \frac{N \Phi_B}{i} \)
 </p>
 <p class="formula">
-    <span class="equation-number">16.</span>
+    <span class="equation-number">25.</span>
     \( U = \frac{1}{2} L i^2 \)
 </p>
 
