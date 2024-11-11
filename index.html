@@ -73,15 +73,6 @@
             border-top: 1px solid #ccc;
             margin: 20px 0;
         }
-        .constants {
-            display: flex;
-            justify-content: space-between;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        .constants div {
-            text-align: left;
-        }
     </style>
     <!-- Cargar MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -91,163 +82,50 @@
 
 <h2>Fórmulas de Física</h2>
 
-<div class="constants">
-    <div>
-        \( k = \frac{1}{4 \pi \varepsilon_0} = 9 \times 10^9 \, \text{N} \, \text{m}^2/\text{C}^2 \) <br>
-        \( \varepsilon_0 = 8.8542 \times 10^{-12} \, \text{C}^2/\text{N} \, \text{m}^2 \) <br>
-        \( m_e = 9.1094 \times 10^{-31} \, \text{Kg} \) <br>
-        \( m_n = 1.67491 \times 10^{-27} \, \text{Kg} \) <br>
-        \( \mu_0 = 4\pi \times 10^{-7} \, \text{T} \, \text{m}/\text{A} \)
-    </div>
-    <div>
-        \( N_A = 6.022141 \times 10^{23} \, \text{átomos}/\text{mol} \) <br>
-        \( e = 1.6022 \times 10^{-19} \, \text{C} \) <br>
-        \( m_p = 1.6726 \times 10^{-27} \, \text{Kg} \) <br>
-        \( eV = 1.6022 \times 10^{-19} \, \text{J} \)
-    </div>
-</div>
-
-<h3>Circuitos de Corriente Continua</h3>
-
-<p class="subtitulo tooltip">Ley de Kirchhoff
-    <span class="tooltiptext">Establece que la suma de corrientes que entran a un nodo es igual a la suma de las corrientes que salen.</span>
-</p>
-<p class="formula">
-    <span class="equation-number">1.</span>
-    \( \sum \text{nodo} I_{\text{entran}} = 0 \)
-</p>
-<p class="formula">
-    <span class="equation-number">2.</span>
-    \( \sum \text{malla} \, \Delta V = 0 \)
-</p>
-
-<p class="subtitulo tooltip">Circuito RC (Carga)
-    <span class="tooltiptext">En un circuito RC, un capacitor se carga a través de una resistencia.</span>
-</p>
-<p class="formula">
-    <span class="equation-number">3.</span>
-    \( q(t) = C V(1 - e^{-\frac{t}{RC}}) \)
-</p>
-<p class="formula">
-    <span class="equation-number">4.</span>
-    \( V_C = V(1 - e^{-\frac{t}{RC}}) \)
-</p>
-<p class="formula">
-    <span class="equation-number">5.</span>
-    \( i = \frac{V}{R} e^{-\frac{t}{RC}} \)
-</p>
-
-<p class="subtitulo tooltip">Circuito RC (Descarga)
-    <span class="tooltiptext">En un circuito RC, un capacitor se descarga a través de una resistencia.</span>
-</p>
-<p class="formula">
-    <span class="equation-number">6.</span>
-    \( q(t) = Q_0 e^{-\frac{t}{RC}} \)
-</p>
-<p class="formula">
-    <span class="equation-number">7.</span>
-    \( i = \frac{V_0}{R} e^{-\frac{t}{RC}} \)
-</p>
-<hr>
-
 <h3>Magnetismo</h3>
 
 <p class="formula">
-    <span class="equation-number">8.</span>
-    \( \vec{F} = q \vec{v} \times \vec{B} \)
+    <span class="equation-number">1.</span>
+    <span class="tooltip">\( \vec{F} \)
+            <span class="tooltiptext">Fuerza magnética sobre una partícula con carga en movimiento</span>
+        </span> =
+    <span class="tooltip">\( q \)
+            <span class="tooltiptext">Carga de la partícula</span>
+        </span>
+    <span class="tooltip">\( \vec{v} \)
+            <span class="tooltiptext">Velocidad de la partícula</span>
+        </span> ×
+    <span class="tooltip">\( \vec{B} \)
+            <span class="tooltiptext">Campo magnético</span>
+        </span>
 </p>
 
-<p class="subtitulo tooltip">Fuerza de Lorentz
-    <span class="tooltiptext">Es la fuerza que experimenta una carga en movimiento en un campo electromagnético.</span>
+<p class="subtitulo tooltip">Ley de Gauss para el Magnetismo
+    <span class="tooltiptext">El flujo magnético total a través de cualquier superficie cerrada es igual a cero</span>
 </p>
 <p class="formula">
-    <span class="equation-number">9.</span>
-    \( \vec{F} = q \vec{E} + q \vec{v} \times \vec{B} \)
+    <span class="equation-number">2.</span>
+    \( \oint \)
+    <span class="tooltip">\( \vec{B} \)
+            <span class="tooltiptext">Campo magnético</span>
+        </span> ·
+    <span class="tooltip">\( d\vec{A} \)
+            <span class="tooltiptext">Elemento vectorial de área de la superficie</span>
+        </span> = 0
 </p>
-<p class="formula">
-    <span class="equation-number">10.</span>
-    \( F = I l \vec{B} \)
-</p>
-<p class="formula">
-    <span class="equation-number">11.</span>
-    \( \sum F = \frac{m v^2}{R} \)
-</p>
-<p class="formula">
-    <span class="equation-number">12.</span>
-    \( \tau = \mu B \sin \theta \)
-</p>
-<p class="formula">
-    <span class="equation-number">13.</span>
-    \( U = - \mu \cdot B \cos \theta \)
-</p>
-<p class="formula">
-    <span class="equation-number">14.</span>
-    \( \vec{\tau} = \vec{\mu} \times \vec{B} \)
-</p>
-<p class="formula">
-    <span class="equation-number">15.</span>
-    \( \vec{\mu} = N i A \hat{n} \)
-</p>
-<hr>
 
 <h3>Fuentes de Campo Magnético</h3>
 
-<p class="subtitulo tooltip">Ley de Biot-Savart
-    <span class="tooltiptext">Describe el campo magnético generado por una corriente en un punto específico del espacio.</span>
-</p>
 <p class="formula">
-    <span class="equation-number">16.</span>
-    \( \vec{B} = \frac{\mu_0}{4\pi} \int \frac{I d\vec{l} \times \hat{r}}{r^2} \)
-</p>
-
-<p class="subtitulo tooltip">Ley de Ampère
-    <span class="tooltiptext">Establece que el campo magnético en una trayectoria cerrada es proporcional a la corriente que atraviesa la superficie encerrada.</span>
-</p>
-<p class="formula">
-    <span class="equation-number">17.</span>
-    \( \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enc}} \)
-</p>
-<p class="formula">
-    <span class="equation-number">18.</span>
-    \( B = \mu_0 n I \) (Solenoide)
-</p>
-<p class="formula">
-    <span class="equation-number">19.</span>
-    \( B = \frac{\mu_0 I}{2\pi r} \) (Conductor largo)
-</p>
-<p class="formula">
-    \( \mu_0 = 4 \pi \times 10^{-7} \, \text{Tm/A} \)
-</p>
-<p class="formula">
-    <span class="equation-number">20.</span>
-    \( n = \frac{\#\text{vueltas}}{\text{Longitud}} \)
-</p>
-<p class="subtitulo tooltip">Ley de Gauss para el Magnetismo
-    <span class="tooltiptext">Indica que el flujo magnético neto a través de una superficie cerrada es cero, lo cual implica que no existen monopolos magnéticos.</span>
-</p>
-<p class="formula">
-    <span class="equation-number">21.</span>
-    \( \oint \vec{B} \cdot d\vec{A} = 0 \)
-</p>
-<p class="formula">
-    <span class="equation-number">22.</span>
-    \( \varepsilon = \oint \vec{E} \cdot d\vec{l} \)
-</p>
-<hr>
-
-<h3>Inductancia</h3>
-
-<p class="formula">
-    <span class="equation-number">23.</span>
-    \( \varepsilon = -L \frac{di}{dt} \)
-</p>
-<p class="formula">
-    <span class="equation-number">24.</span>
-    \( L = \frac{N \Phi_B}{i} \)
-</p>
-<p class="formula">
-    <span class="equation-number">25.</span>
-    \( U = \frac{1}{2} L i^2 \)
+    <span class="equation-number">3.</span>
+    \( \Phi_B = \int \)
+    <span class="tooltip">\( B \cos \phi \)
+            <span class="tooltiptext">Componente del campo magnético perpendicular a la superficie</span>
+        </span>
+    <span class="tooltip">\( dA \)
+            <span class="tooltiptext">Elemento de área de la superficie</span>
+        </span> =
+    \( \int B_{\perp} \, dA \) = \( \int \vec{B} \cdot d\vec{A} \)
 </p>
 
 </body>
