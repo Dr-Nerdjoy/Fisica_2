@@ -27,6 +27,8 @@
             color: blue;
             font-weight: bold;
             margin-top: 15px;
+            cursor: pointer;
+            position: relative;
         }
         .formula {
             font-size: 18px;
@@ -82,20 +84,32 @@
 
 <h3>Circuitos de Corriente Continua</h3>
 
-<p class="subtitulo">Ley de Kirchhoff</p>
+<p class="subtitulo tooltip">Ley de Kirchhoff
+    <span class="tooltiptext">Establece que la suma de corrientes que entran a un nodo es igual a la suma de las corrientes que salen.</span>
+</p>
 <p class="formula">
     <span class="equation-number">1.</span>
-    \( \sum \text{nodo} \, I_{\text{entran}} = 0 \)
+    \( \sum \) nodo
+    <span class="tooltip"> \( I_{\text{entran}} \)
+            <span class="tooltiptext">Corriente que entra en el nodo</span>
+        </span>
+    = 0
 </p>
 <p class="formula">
     <span class="equation-number">2.</span>
-    \( \sum \text{malla} \, \Delta V = 0 \)
+    \( \sum \) malla \( \Delta V = 0 \)
 </p>
 
-<p class="subtitulo">Circuito RC</p>
+<p class="subtitulo tooltip">Circuito RC
+    <span class="tooltiptext">En un circuito RC, un capacitor se carga o descarga a través de una resistencia.</span>
+</p>
 <p class="formula">
     <span class="equation-number">3.</span>
-    \( q(t) = C V(1 - e^{-\frac{t}{RC}}) \)
+    \( q(t) = \)
+    <span class="tooltip">C
+            <span class="tooltiptext">Capacitancia (en faradios)</span>
+        </span>
+    \( V(1 - e^{-\frac{t}{RC}}) \)
 </p>
 <p class="formula">
     <span class="equation-number">4.</span>
@@ -105,10 +119,16 @@
 
 <h3>Magnetismo</h3>
 
-<p class="subtitulo">Fuerza de Lorentz</p>
+<p class="subtitulo tooltip">Fuerza de Lorentz
+    <span class="tooltiptext">Es la fuerza que experimenta una carga en movimiento en un campo electromagnético.</span>
+</p>
 <p class="formula">
     <span class="equation-number">5.</span>
-    \( \vec{F} = q \vec{v} \times \vec{B} \)
+    \( \vec{F} = \)
+    <span class="tooltip">q
+            <span class="tooltiptext">Carga de la partícula (en coulombs)</span>
+        </span>
+    \( \vec{v} \times \vec{B} \)
 </p>
 <p class="formula">
     <span class="equation-number">6.</span>
@@ -122,13 +142,17 @@
 
 <h3>Fuentes de Campo Magnético</h3>
 
-<p class="subtitulo">Ley de Biot-Savart</p>
+<p class="subtitulo tooltip">Ley de Biot-Savart
+    <span class="tooltiptext">Describe el campo magnético generado por una corriente en un punto específico del espacio.</span>
+</p>
 <p class="formula">
     <span class="equation-number">8.</span>
     \( \vec{B} = \frac{\mu_0}{4\pi} \int \frac{I d\vec{l} \times \hat{r}}{r^2} \)
 </p>
 
-<p class="subtitulo">Ley de Ampère</p>
+<p class="subtitulo tooltip">Ley de Ampère
+    <span class="tooltiptext">Establece que el campo magnético en una trayectoria cerrada es proporcional a la corriente que atraviesa la superficie encerrada.</span>
+</p>
 <p class="formula">
     <span class="equation-number">9.</span>
     \( \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enc}} \)
