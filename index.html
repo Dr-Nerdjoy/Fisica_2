@@ -15,6 +15,12 @@
             text-align: center;
             font-size: 24px;
         }
+        h3 {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
         .formula {
             font-size: 18px;
             margin: 20px 0;
@@ -37,7 +43,7 @@
             padding: 8px;
             position: absolute;
             z-index: 1;
-            bottom: 125%; /* Mostrar arriba */
+            bottom: 125%;
             left: 50%;
             transform: translateX(-50%);
             opacity: 0;
@@ -47,10 +53,11 @@
             visibility: visible;
             opacity: 1;
         }
-        hr {
-            border: 0;
-            border-top: 1px solid #ccc;
-            margin: 20px 0;
+        .equation-number {
+            font-weight: bold;
+            text-align: left;
+            display: block;
+            margin-top: 20px;
         }
     </style>
     <!-- Cargar MathJax -->
@@ -61,45 +68,63 @@
 
 <h2>Fórmulas de Física</h2>
 
-<h3>1. Circuitos de Corriente Continua</h3>
+<h3>Circuitos de Corriente Continua</h3>
 <p class="formula">
-        <span class="tooltip">Ley de Kirchhoff
+    <span class="equation-number">Ecuación 1:</span>
+    <span class="tooltip">Ley de Kirchhoff
             <span class="tooltiptext">Establece que la suma de corrientes que entran a un nodo es igual a la suma de las corrientes que salen.</span>
         </span>
     <br>
-    \( \sum \text{nodo} I_{\text{entran}} = 0 \), &nbsp; \( \sum \text{malla} \Delta V = 0 \)
+    \( \sum \text{nodo} \, \text{\( I_{\text{entran}} \)} = 0 \), &nbsp; \( \sum \text{malla} \, \Delta V = 0 \)
 </p>
+
 <p class="formula">
-        <span class="tooltip">Circuito RC
+    <span class="equation-number">Ecuación 2:</span>
+    <span class="tooltip">Circuito RC
             <span class="tooltiptext">En un circuito RC, un capacitor se carga o descarga a través de una resistencia.</span>
-        </span> <br>
-    \( q(t) = CV(1 - e^{-\frac{t}{RC}}) \), &nbsp; \( V_C = V(1 - e^{-\frac{t}{RC}}) \)
+        </span>
+    <br>
+    \( q(t) = \)
+    <span class="tooltip">C
+            <span class="tooltiptext">Capacitancia (en faradios)</span>
+        </span>
+    \( V(1 - e^{-\frac{t}{\text{\(RC\)}}}) \), &nbsp;
+    \( V_C = V(1 - e^{-\frac{t}{\text{\(RC\)}}}) \)
 </p>
 <hr>
 
-<h3>2. Magnetismo</h3>
+<h3>Magnetismo</h3>
 <p class="formula">
-        <span class="tooltip">Fuerza de Lorentz
+    <span class="equation-number">Ecuación 3:</span>
+    <span class="tooltip">Fuerza de Lorentz
             <span class="tooltiptext">Es la fuerza que experimenta una carga en movimiento en un campo electromagnético.</span>
         </span>
     <br>
-    \( \vec{F} = q\vec{E} + q\vec{v} \times \vec{B} \)
+    \( \vec{F} = \)
+    <span class="tooltip">q
+            <span class="tooltiptext">Carga de la partícula (en coulombs)</span>
+        </span>
+    \( \vec{v} \times \vec{B} \)
 </p>
+
 <p class="formula">
+    <span class="equation-number">Ecuación 4:</span>
     \( F = qvB \sin \theta \), &nbsp; \( U = -\mu \cdot B \cos \theta \)
 </p>
 <hr>
 
-<h3>3. Fuentes de Campo Magnético</h3>
+<h3>Fuentes de Campo Magnético</h3>
 <p class="formula">
-        <span class="tooltip">Ley de Biot-Savart
+    <span class="equation-number">Ecuación 5:</span>
+    <span class="tooltip">Ley de Biot-Savart
             <span class="tooltiptext">Describe el campo magnético generado por una corriente en un punto específico del espacio.</span>
         </span>
     <br>
     \( \vec{B} = \frac{\mu_0}{4\pi} \int \frac{I d\vec{l} \times \hat{r}}{r^2} \)
 </p>
 <p class="formula">
-        <span class="tooltip">Ley de Ampère
+    <span class="equation-number">Ecuación 6:</span>
+    <span class="tooltip">Ley de Ampère
             <span class="tooltiptext">Establece que el campo magnético en una trayectoria cerrada es proporcional a la corriente que atraviesa la superficie encerrada.</span>
         </span>
     <br>
@@ -107,9 +132,10 @@
 </p>
 <hr>
 
-<h3>4. Inductancia</h3>
+<h3>Inductancia</h3>
 <p class="formula">
-        <span class="tooltip">Inductancia
+    <span class="equation-number">Ecuación 7:</span>
+    <span class="tooltip">Inductancia
             <span class="tooltiptext">La inductancia se refiere a la capacidad de una bobina para generar un voltaje inducido en respuesta a cambios en la corriente.</span>
         </span>
     <br>
