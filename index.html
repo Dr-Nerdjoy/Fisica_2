@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmulas de Física</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .formula {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: blue;
+            font-weight: bold;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 250px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Mostrar arriba */
+            left: 50%;
+            margin-left: -125px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Fórmulas de Física</h2>
+
+<h3>Circuitos de Corriente Continua</h3>
+<p class="formula">
+        <span class="tooltip">Ley de Kirchhoff
+            <span class="tooltiptext">Establece que la suma de corrientes que entran a un nodo es igual a la suma de las corrientes que salen.</span>
+        </span>
+    <br>
+    \( \sum \text{nodo} I_{\text{entran}} = 0 \), &nbsp; \( \sum \text{malla} \Delta V = 0 \)
+</p>
+<p class="formula">
+        <span class="tooltip">Circuito RC
+            <span class="tooltiptext">En un circuito RC, un capacitor se carga o descarga a través de una resistencia.</span>
+        </span> <br>
+    \( q(t) = CV(1 - e^{-\frac{t}{RC}}) \), &nbsp; \( V_C = V(1 - e^{-\frac{t}{RC}}) \)
+</p>
+
+<h3>Magnetismo</h3>
+<p class="formula">
+        <span class="tooltip">Fuerza de Lorentz
+            <span class="tooltiptext">Es la fuerza que experimenta una carga en movimiento en un campo electromagnético.</span>
+        </span>
+    <br>
+    \( \vec{F} = q\vec{E} + q\vec{v} \times \vec{B} \)
+</p>
+<p class="formula">
+    \( F = qvB \sin \theta \), &nbsp; \( U = -\mu \cdot B \cos \theta \)
+</p>
+
+<h3>Fuentes de Campo Magnético</h3>
+<p class="formula">
+        <span class="tooltip">Ley de Biot-Savart
+            <span class="tooltiptext">Describe el campo magnético generado por una corriente en un punto específico del espacio.</span>
+        </span>
+    <br>
+    \( \vec{B} = \frac{\mu_0}{4\pi} \int \frac{I d\vec{l} \times \hat{r}}{r^2} \)
+</p>
+<p class="formula">
+        <span class="tooltip">Ley de Ampère
+            <span class="tooltiptext">Establece que el campo magnético en una trayectoria cerrada es proporcional a la corriente que atraviesa la superficie encerrada.</span>
+        </span>
+    <br>
+    \( \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enc}} \)
+</p>
+
+<h3>Inductancia</h3>
+<p class="formula">
+        <span class="tooltip">Inductancia
+            <span class="tooltiptext">La inductancia se refiere a la capacidad de una bobina para generar un voltaje inducido en respuesta a cambios en la corriente.</span>
+        </span>
+    <br>
+    \( \varepsilon = -L \frac{di}{dt} \), &nbsp; \( U = \frac{1}{2} L i^2 \)
+</p>
+
+</body>
+</html>
