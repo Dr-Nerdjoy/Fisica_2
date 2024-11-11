@@ -10,42 +10,51 @@
             padding: 20px;
             max-width: 800px;
             margin: auto;
+            background-color: #f9f9f9;
+            color: #333;
         }
         h2 {
             text-align: center;
-            font-size: 24px;
+            font-size: 28px;
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 10px;
         }
         h3 {
-            text-align: center;
-            font-size: 20px;
+            text-align: left;
+            font-size: 22px;
             margin-top: 30px;
-            font-weight: bold;
+            color: #003366;
+            padding: 8px 0;
+            border-bottom: 1px solid #ccc;
         }
         .subtitulo {
-            text-align: center;
+            text-align: left;
             font-size: 18px;
-            color: blue;
+            color: #006699;
             font-weight: bold;
             margin-top: 15px;
             cursor: pointer;
             position: relative;
+            margin-bottom: 10px;
         }
         .formula {
-            font-size: 18px;
-            margin: 10px 0;
+            font-size: 20px;
+            margin: 15px 0;
             text-align: center;
+            color: #444;
         }
         .tooltip {
             position: relative;
             display: inline-block;
             cursor: pointer;
-            color: blue;
+            color: #006699;
             font-weight: bold;
         }
         .tooltip .tooltiptext {
             visibility: hidden;
-            width: 250px;
-            background-color: #555;
+            width: 300px;
+            background-color: #333;
             color: #fff;
             text-align: center;
             border-radius: 5px;
@@ -67,17 +76,19 @@
             text-align: left;
             display: inline-block;
             margin-right: 10px;
+            color: #003366;
         }
         hr {
             border: 0;
             border-top: 1px solid #ccc;
-            margin: 20px 0;
+            margin: 25px 0;
         }
         .constants {
             display: flex;
             justify-content: space-between;
             font-size: 16px;
             margin-bottom: 20px;
+            color: #333;
         }
         .constants div {
             text-align: left;
@@ -114,10 +125,7 @@
 </p>
 <p class="formula">
     <span class="equation-number">1.</span>
-    \( \sum \text{nodo} \)
-    <span class="tooltip">\( I_{\text{entran}} \)
-        <span class="tooltiptext">Corriente que entra en el nodo</span>
-    </span> = 0
+    \( \sum \text{nodo} I_{\text{entran}} = 0 \)
 </p>
 <p class="formula">
     <span class="equation-number">2.</span>
@@ -129,18 +137,16 @@
 </p>
 <p class="formula">
     <span class="equation-number">3.</span>
-    \( q(t) = \)
-    <span class="tooltip">\( C \)
-        <span class="tooltiptext">Capacitancia del capacitor</span>
-    </span>
-    \( V(1 - e^{-\frac{t}{RC}}) \)
+    \( q(t) = C V(1 - e^{-\frac{t}{RC}}) \)
 </p>
 <p class="formula">
     <span class="equation-number">4.</span>
     \( V_C = V(1 - e^{-\frac{t}{RC}}) \)
 </p>
 <p class="formula">
-    <span class="equation-number">5.</span>
+    <span class="equation-number tooltip">5.
+        <span class="tooltiptext">Corriente en un circuito RC durante la carga del capacitor.</span>
+    </span>
     \( i = \frac{V}{R} e^{-\frac{t}{RC}} \)
 </p>
 
@@ -148,11 +154,15 @@
     <span class="tooltiptext">En un circuito RC, un capacitor se descarga a través de una resistencia.</span>
 </p>
 <p class="formula">
-    <span class="equation-number">6.</span>
+    <span class="equation-number tooltip">6.
+        <span class="tooltiptext">Carga restante en el capacitor durante la descarga.</span>
+    </span>
     \( q(t) = Q_0 e^{-\frac{t}{RC}} \)
 </p>
 <p class="formula">
-    <span class="equation-number">7.</span>
+    <span class="equation-number tooltip">7.
+        <span class="tooltiptext">Corriente en un circuito RC durante la descarga del capacitor.</span>
+    </span>
     \( i = \frac{V_0}{R} e^{-\frac{t}{RC}} \)
 </p>
 <hr>
@@ -160,50 +170,53 @@
 <h3>Magnetismo</h3>
 
 <p class="formula">
-    <span class="equation-number">8.</span>
-    <span class="tooltip">\( \vec{F} \)
-        <span class="tooltiptext">Fuerza magnética sobre una partícula con carga en movimiento</span>
-    </span> =
-    <span class="tooltip">\( q \)
-        <span class="tooltiptext">Carga de la partícula</span>
+    <span class="equation-number tooltip">8.
+        <span class="tooltiptext">Fuerza magnética sobre una partícula con carga en movimiento.</span>
     </span>
-    <span class="tooltip">\( \vec{v} \)
-        <span class="tooltiptext">Velocidad de la partícula</span>
-    </span> ×
-    <span class="tooltip">\( \vec{B} \)
-        <span class="tooltiptext">Campo magnético</span>
-    </span>
+    \( \vec{F} = q \vec{v} \times \vec{B} \)
 </p>
 
-<p class="subtitulo tooltip">Fuerza de Lorentz
+<h3 class="subtitulo tooltip">Fuerza de Lorentz
     <span class="tooltiptext">Es la fuerza que experimenta una carga en movimiento en un campo electromagnético.</span>
-</p>
+</h3>
 <p class="formula">
     <span class="equation-number">9.</span>
     \( \vec{F} = q \vec{E} + q \vec{v} \times \vec{B} \)
 </p>
 <p class="formula">
-    <span class="equation-number">10.</span>
+    <span class="equation-number tooltip">10.
+        <span class="tooltiptext">Fuerza magnética sobre un segmento recto de alambre.</span>
+    </span>
     \( F = I l \vec{B} \)
 </p>
 <p class="formula">
-    <span class="equation-number">11.</span>
+    <span class="equation-number tooltip">11.
+        <span class="tooltiptext">Fuerza neta centrípeta en un objeto en movimiento circular.</span>
+    </span>
     \( \sum F = \frac{m v^2}{R} \)
 </p>
 <p class="formula">
-    <span class="equation-number">12.</span>
+    <span class="equation-number tooltip">12.
+        <span class="tooltiptext">Torque en un dipolo magnético en un campo magnético.</span>
+    </span>
     \( \tau = \mu B \sin \theta \)
 </p>
 <p class="formula">
-    <span class="equation-number">13.</span>
+    <span class="equation-number tooltip">13.
+        <span class="tooltiptext">Energía potencial de un dipolo magnético en un campo magnético.</span>
+    </span>
     \( U = - \mu \cdot B \cos \theta \)
 </p>
 <p class="formula">
-    <span class="equation-number">14.</span>
+    <span class="equation-number tooltip">14.
+        <span class="tooltiptext">Torque en un dipolo magnético.</span>
+    </span>
     \( \vec{\tau} = \vec{\mu} \times \vec{B} \)
 </p>
 <p class="formula">
-    <span class="equation-number">15.</span>
+    <span class="equation-number tooltip">15.
+        <span class="tooltiptext">Momento dipolar magnético de una espira de corriente.</span>
+    </span>
     \( \vec{\mu} = N i A \hat{n} \)
 </p>
 <hr>
@@ -214,7 +227,9 @@
     <span class="tooltiptext">Describe el campo magnético generado por una corriente en un punto específico del espacio.</span>
 </p>
 <p class="formula">
-    <span class="equation-number">16.</span>
+    <span class="equation-number tooltip">16.
+        <span class="tooltiptext">Campo magnético en un punto debido a un elemento de corriente.</span>
+    </span>
     \( \vec{B} = \frac{\mu_0}{4\pi} \int \frac{I d\vec{l} \times \hat{r}}{r^2} \)
 </p>
 
@@ -222,33 +237,42 @@
     <span class="tooltiptext">Establece que el campo magnético en una trayectoria cerrada es proporcional a la corriente que atraviesa la superficie encerrada.</span>
 </p>
 <p class="formula">
-    <span class="equation-number">17.</span>
+    <span class="equation-number tooltip">17.
+        <span class="tooltiptext">Relación entre campo magnético y corriente en una trayectoria cerrada.</span>
+    </span>
     \( \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enc}} \)
 </p>
 <p class="formula">
-    <span class="equation-number">18.</span>
+    <span class="equation-number tooltip">18.
+        <span class="tooltiptext">Campo magnético dentro de un solenoide largo y recto.</span>
+    </span>
     \( B = \mu_0 n I \) (Solenoide)
 </p>
 <p class="formula">
-    <span class="equation-number">19.</span>
+    <span class="equation-number tooltip">19.
+        <span class="tooltiptext">Campo magnético cerca de un conductor largo y recto.</span>
+    </span>
     \( B = \frac{\mu_0 I}{2\pi r} \) (Conductor largo)
 </p>
 <p class="formula">
-    \( \mu_0 = 4 \pi \times 10^{-7} \, \text{Tm/A} \)
-</p>
-<p class="formula">
-    <span class="equation-number">20.</span>
+    <span class="equation-number tooltip">20.
+        <span class="tooltiptext">Densidad de vueltas de un solenoide.</span>
+    </span>
     \( n = \frac{\#\text{vueltas}}{\text{Longitud}} \)
 </p>
 <p class="subtitulo tooltip">Ley de Gauss para el Magnetismo
     <span class="tooltiptext">Indica que el flujo magnético neto a través de una superficie cerrada es cero, lo cual implica que no existen monopolos magnéticos.</span>
 </p>
 <p class="formula">
-    <span class="equation-number">21.</span>
+    <span class="equation-number tooltip">21.
+        <span class="tooltiptext">Flujo magnético total a través de una superficie cerrada es cero.</span>
+    </span>
     \( \oint \vec{B} \cdot d\vec{A} = 0 \)
 </p>
 <p class="formula">
-    <span class="equation-number">22.</span>
+    <span class="equation-number tooltip">22.
+        <span class="tooltiptext">Fuerza electromotriz inducida en un circuito cerrado.</span>
+    </span>
     \( \varepsilon = \oint \vec{E} \cdot d\vec{l} \)
 </p>
 <hr>
@@ -256,15 +280,21 @@
 <h3>Inductancia</h3>
 
 <p class="formula">
-    <span class="equation-number">23.</span>
+    <span class="equation-number tooltip">23.
+        <span class="tooltiptext">Fuerza electromotriz inducida por un cambio de corriente en un inductor.</span>
+    </span>
     \( \varepsilon = -L \frac{di}{dt} \)
 </p>
 <p class="formula">
-    <span class="equation-number">24.</span>
+    <span class="equation-number tooltip">24.
+        <span class="tooltiptext">Inductancia de una bobina en función del flujo magnético.</span>
+    </span>
     \( L = \frac{N \Phi_B}{i} \)
 </p>
 <p class="formula">
-    <span class="equation-number">25.</span>
+    <span class="equation-number tooltip">25.
+        <span class="tooltiptext">Energía almacenada en el campo magnético de un inductor.</span>
+    </span>
     \( U = \frac{1}{2} L i^2 \)
 </p>
 
