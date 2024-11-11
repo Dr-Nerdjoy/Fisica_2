@@ -5,13 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fórmulas de Física</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
-            padding: 20px;
             max-width: 800px;
             margin: auto;
             background-color: #f9f9f9;
             color: #333;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #003366;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            margin: 0 10px;
+        }
+        .navbar a:hover {
+            background-color: #006699;
+            color: white;
+        }
+        .content {
+            margin-top: 60px;
+            padding: 20px;
         }
         h2 {
             text-align: center;
@@ -105,8 +137,13 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
+    <div class="navbar">
+        <a href="#formulario">Formulario</a>
+        <a href="cheat_sheet.html" target="_blank">Anotaciones</a>
+    </div>
 
-<h2>Fórmulas de Física</h2>
+    <div class="content">
+        <h2 id="formulario">Fórmulas de Física</h2>
 
 <div class="constants">
     <div>
@@ -326,6 +363,6 @@
     \( U = \frac{1}{2} L i^2 \)
 </p>
 <p class="descripcion">Expresa la energía almacenada en un inductor.</p>
-
+    </div>
 </body>
 </html>
